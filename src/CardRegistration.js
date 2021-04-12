@@ -63,19 +63,22 @@ function CardRegistration() {
                                     <div></div>
                                 </div>
                             </div>
-                            {/* <div class="back">
-                                <div class="strip"></div>
-                                <div class="logo"></div>
-                                <div class="ccv">
-                                    <label className="card-label card-label-ccv">
-                                        CCV
-                                    </label>
-                                    <div></div>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                     <form class="form" autocomplete="off" novalidate>
+                        <fieldset>
+                            <label
+                                className="card-info-label"
+                                for="card-holder"
+                            >
+                                Card holder
+                            </label>
+                            <input
+                                type="text"
+                                id="card-holder"
+                                className="card-holder"
+                            />
+                        </fieldset>
                         <fieldset>
                             <label
                                 className="card-info-label"
@@ -106,19 +109,6 @@ function CardRegistration() {
                                 id="card-number-3"
                                 class="input-cart-number"
                                 maxlength="4"
-                            />
-                        </fieldset>
-                        <fieldset>
-                            <label
-                                className="card-info-label"
-                                for="card-holder"
-                            >
-                                Card holder
-                            </label>
-                            <input
-                                type="text"
-                                id="card-holder"
-                                className="card-holder"
                             />
                         </fieldset>
                         <fieldset class="fieldset-expiration">
@@ -166,12 +156,6 @@ function CardRegistration() {
                                     <option>2030</option>
                                 </select>
                             </div>
-                        </fieldset>
-                        <fieldset class="fieldset-ccv">
-                            <label className="card-info-label" for="card-ccv">
-                                CCV
-                            </label>
-                            <input type="text" id="card-ccv" maxlength="3" />
                         </fieldset>
                         <button class="card-create-btn">
                             <i class="fa fa-lock"></i> submit
