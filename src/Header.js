@@ -22,63 +22,66 @@ function Header(props) {
     //   $(document).ready(function () {
     //   })
     // })
-    $(function () {
-        var headerScroll = $(".header-back").offset();
-        $(window).on("beforeunload", function () {
-            $(window).scrollTop(0);
-        });
-        $(document).ready(function () {
-            $(".inner").mouseover(function () {
-                $(".sub-wrap").css("opacity", "1");
-                $(".sub-wrap").css("transform", "translateY(0px)");
-                $(".main_bar").css("color", "black");
-                $(".login_box").css("color", "black");
-                $(".header-back").css("opacity", "1");
-                $(".header-back").css("transform", "translateY(0px)");
-                $(".header-back").css("border-bottom", "none");
-                // if ($(document).scrollTop() > headerScroll.top) {
-                // }
-            });
-            $(".sub-wrap").mouseleave(function () {
-                $(".sub-wrap").css("opacity", "0");
-                $(".sub-wrap").css("transform", "translateY(-90px)");
+    // $(function () {
+    //     var headerScroll = $(".header-back").offset();
+    //     $(window).on("beforeunload", function () {
+    //         $(window).scrollTop(0);
+    //     });
+    //     $(document).ready(function () {
+    //         $(".inner").mouseover(function () {
+    //             $(".sub-wrap").css("opacity", "1");
+    //             $(".sub-wrap").css("transform", "translateY(0px)");
+    //             $("sub-list_li").css("opacity", "1");
+    //             $(".main_bar").css("color", "black");
+    //             $(".login_box").css("color", "black");
+    //             $(".header-back").css("opacity", "1");
+    //             $(".header-back").css("transform", "translateY(0px)");
+    //             $(".header-back").css("border-bottom", "none");
+    //             // if ($(document).scrollTop() > headerScroll.top) {
+    //             // }
+    //         });
+    //         $(".sub-wrap").mouseleave(function () {
+    //             $(".sub-wrap").css("opacity", "0");
+    //             $(".sub-wrap").css("transform", "translateY(-90px)");
+    //             $(".sub-wrap").css("transition-delay", "0s");
+    //             $("sub-list_li").css("opacity", "0");
 
-                if ($(document).scrollTop() > headerScroll.top) {
-                    $(".header-back").css("opacity", "1");
-                    $(".main_bar").css("color", "black");
-                    $(".login_box").css("color", "black");
-                    $(".header-back").css("border-bottom", "1px solid #d4d4d4");
-                } else {
-                    $(".header-back").css("opacity", "0");
-                    $(".header-back").css("transform", "translateY(0px)");
-                    $(".main_bar").css("color", "white");
-                    $(".login_box").css("color", "white");
-                }
-            });
-            $(window).scroll(function () {
-                var scroll = $(window).scrollTop();
+    //             if ($(document).scrollTop() > headerScroll.top) {
+    //                 $(".header-back").css("opacity", "1");
+    //                 $(".main_bar").css("color", "black");
+    //                 $(".login_box").css("color", "black");
+    //                 $(".header-back").css("border-bottom", "1px solid #d4d4d4");
+    //             } else {
+    //                 $(".header-back").css("opacity", "0");
+    //                 $(".header-back").css("transform", "translateY(0px)");
+    //                 $(".main_bar").css("color", "white");
+    //                 $(".login_box").css("color", "white");
+    //             }
+    //         });
+    //         $(window).scroll(function () {
+    //             var scroll = $(window).scrollTop();
 
-                console.log("백그라운드" + headerScroll.top);
-                console.log(scroll);
-                console.log("헤더 스크롤" + 0);
-                if ($(document).scrollTop() > headerScroll.top) {
-                    $(".header-back").css("opacity", "1");
-                    $(".header-back").css("border-bottom", "1px solid #d4d4d4");
-                    $(".main_bar").css("color", "black");
-                    $(".login_box").css("color", "black");
-                } else {
-                    $(".header-back").css("opacity", "0");
-                    $(".main_bar").css("color", "white");
-                    $(".login_box").css("color", "white");
-                }
-            });
-        });
-    });
+    //             console.log("백그라운드" + headerScroll.top);
+    //             console.log(scroll);
+    //             console.log("헤더 스크롤" + 0);
+    //             if ($(document).scrollTop() > headerScroll.top) {
+    //                 $(".header-back").css("opacity", "1");
+    //                 $(".header-back").css("border-bottom", "1px solid #d4d4d4");
+    //                 $(".main_bar").css("color", "black");
+    //                 $(".login_box").css("color", "black");
+    //             } else {
+    //                 $(".header-back").css("opacity", "0");
+    //                 $(".main_bar").css("color", "white");
+    //                 $(".login_box").css("color", "white");
+    //             }
+    //         });
+    //     });
+    // });
 
     return (
         <>
             <div className="dHead">
-                <div className="header-back" />
+                {/* <div className="header-back" /> */}
                 <div className="header-wrap">
                     <div className="inner">
                         <h2 className="headerh2">
@@ -102,62 +105,61 @@ function Header(props) {
                         <Heam />
                     </div>
                 </div>
-                <div className="sub-wrap on">
-                    <div className="sub sub_left">
-                        <div className="sub-list">
-                            <ul className="sub-list_ul sub-ul-01">
-                                <li className="sub-list_li">
-                                    <Link to="/map">
-                                        <a href="">충전소 조회</a>
-                                    </Link>
-                                </li>
-                                <li className="sub-list_li">
-                                    <Link to="/navigate">
-                                        <a href="">길찾기</a>
-                                    </Link>
-                                </li>
-                            </ul>
-                            <ul className="sub-list_ul sub-ul-02">
-                                <li className="sub-list_li">
-                                    <Link to="/notice">
-                                        <a href="">공지사항</a>
-                                    </Link>
-                                </li>
+                <div className="sub-wrap on"></div>
+                <div className="sub sub_left">
+                    <div className="sub-list">
+                        <ul className="sub-list_ul sub-ul-01">
+                            <li className="sub-list_li">
+                                <Link to="/map">
+                                    <a href="">충전소 조회</a>
+                                </Link>
+                            </li>
+                            <li className="sub-list_li">
+                                <Link to="/navigate">
+                                    <a href="">길찾기</a>
+                                </Link>
+                            </li>
+                        </ul>
+                        <ul className="sub-list_ul sub-ul-02">
+                            <li className="sub-list_li">
+                                <Link to="/notice">
+                                    <a href="">공지사항</a>
+                                </Link>
+                            </li>
 
-                                <li className="sub-list_li">
-                                    <Link to="/freeboard">
-                                        <a href="">자유게시판</a>
-                                    </Link>
-                                </li>
-                                <li className="sub-list_li">
-                                    <Link to="/tipboard">
-                                        <a href="">TIP게시판</a>
-                                    </Link>
-                                </li>
-                                <li className="sub-list_li">
-                                    <Link to="/news">
-                                        <a href="">뉴스게시판</a>
-                                    </Link>
-                                </li>
-                            </ul>
-                            <ul className="sub-list_ul sub-ul-03">
-                                <li className="sub-list_li">
-                                    <Link to="/faq">
-                                        <a href="">FAQ</a>
-                                    </Link>
-                                </li>
-                                <li className="sub-list_li">
-                                    <Link to="/questions">
-                                        <a href="">문의하기</a>
-                                    </Link>
-                                </li>
-                                <li className="sub-list_li">
-                                    <Link to="/qlist">
-                                        <a href="">문의내역</a>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                            <li className="sub-list_li">
+                                <Link to="/freeboard">
+                                    <a href="">자유게시판</a>
+                                </Link>
+                            </li>
+                            <li className="sub-list_li">
+                                <Link to="/tipboard">
+                                    <a href="">TIP게시판</a>
+                                </Link>
+                            </li>
+                            <li className="sub-list_li">
+                                <Link to="/news">
+                                    <a href="">뉴스게시판</a>
+                                </Link>
+                            </li>
+                        </ul>
+                        <ul className="sub-list_ul sub-ul-03">
+                            <li className="sub-list_li">
+                                <Link to="/faq">
+                                    <a href="">FAQ</a>
+                                </Link>
+                            </li>
+                            <li className="sub-list_li">
+                                <Link to="/questions">
+                                    <a href="">문의하기</a>
+                                </Link>
+                            </li>
+                            <li className="sub-list_li">
+                                <Link to="/qlist">
+                                    <a href="">문의내역</a>
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
